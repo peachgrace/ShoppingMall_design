@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="LoginPage.css">
+    <title>LoginPage</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        var checkLoginStatus = function (response) {
+            console.log(response);
+            //statusChangeCallback(response);
+            if (response.status === 'connected') {
+                document.querySelector('#authBtn').value = 'Logout';
+
+            }
+            else {
+                document.querySelector('#authBtn').value = 'Login';
+
+            }
+
+        }
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '762325608051143',
+                cookie: true,                     // Enable cookies to allow the server to access the session.
+                xfbml: true,                     // Parse social plugins on this webpage.
+                version: 'v9.0'           // Use this Graph API version for this call.
+            });
+
+
+            FB.getLoginStatus(checkLoginStatus);
+        };
+
+    </script>
+    <!-- Load the JS SDK asynchronously    -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</head>
+
+<body> <!--
+    <input type="button" id="authBtn" value="checking..." onclick=" 
+    if(this.value=== 'Login'){
+        //now logout
+        FB.login(function(res)
+        {
+            console.log('Login=>' , res);
+            checkLoginStatus(res);
+        });
+    }
+    else{
+        //now login
+        FB.logout(function(res){
+            console.log('Logout=>' , res);
+            checkLoginStatus(res);
+        });
+        
+    }
+    ">
+    <h1><a href="LoginPage.html">Login</a></h1>
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+    -->
+    <div id="fb-root"></div>
+
+    <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&autoLogAppEvents=1&version=v10.0&appId=762325608051143" 
+    nonce="URVHQSCY"></script>
+    <div class="loginbox">
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" 
+    data-layout="default" data-auto-logout-link="false" data-use-continue-as="false">
+</div></div>
+
+
+</body>
+
+</html>

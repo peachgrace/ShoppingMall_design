@@ -1,0 +1,246 @@
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+  /* animation */
+
+  --animation-duration: 300ms;
+}
+
+/* Universal tag  */
+* {
+  box-sizing: border-box;
+}
+/* body */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  cursor: default; /*커서 올려도 기본값으로 지정*/
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-pink);
+}
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* Typography */
+li {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+h5,
+h4,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+/* Navbar */
+
+.head {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-white);
+}
+#top__navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+  /* color: var(--color-white);*/
+  padding: 15px;
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__search {
+  margin: 5px 5px;
+}
+.navbar__menu li :hover {
+  color: #73aace;
+}
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-pink); /*  */
+  padding: 2px;
+}
+
+#menu__categories__gnb {
+  padding: 3px 3px;
+  background-color: var(--color-light-white);
+}
+.categories {
+  background-color: var(--color-black);
+  display: flex;
+  width: 100%;
+  margin: 0 0;
+  justify-content: space-evenly;
+}
+.categories li {
+  padding: 10px 10px;
+}
+
+/* MENUICON BUTTON */
+/* MAIN PAGE-SECTION */
+
+#main__page__event {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.banner {
+  width: 1000px;
+  padding: 50px 100px;
+}
+.product__block__best {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.product__block__best li {
+  margin: 10px 10px;
+}
+
+.bestphoto {
+  width: 200px;
+}
+.Go__title h5 {
+  padding: 10px;
+  background-color: var(--color-white);
+}
+.main__showing {
+  background-color: var(--color-white);
+}
+.showing__title {
+  background-color: var(--color-white);
+  margin: 10px 10px;
+}
+.showing__title h2 {
+  display: inline;
+  width: 100%;
+  padding: 10px 10px;
+}
+/* FOOTER */
+
+.main__showing,
+.footer__box {
+  margin: 20px;
+}
+footer,
+.showing__title,
+.product__block,
+.Go__title,
+.banner {
+  margin: 20px;
+  border: solid 2px;
+}
+
+/* SIDBAR ANIMATION */
+.dropbtn {
+  color: white;
+
+  font-size: 16px;
+  border: none;
+}
+
+.menuicon {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content,
+a {
+  border-radius: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.menuicon:hover .dropdown-content {
+  display: block;
+}
+
+.menuicon:hover .dropbtn {
+}
